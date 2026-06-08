@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>礎 ISHIZUE | 不動產</title>
+  <title>礎 ISHIZUE | 日式不動產</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -15,8 +17,7 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">
-        <span class="nav__logo-kanji">礎</span>
-        <span class="nav__logo-text">ISHIZUE<br><small>不動產</small></span>
+        <img src="logo.png" alt="礎 ISHIZUE 日式不動產" class="nav__logo-img" />
       </a>
       <button class="nav__hamburger" id="hamburger" aria-label="選單">
         <span></span><span></span><span></span>
@@ -37,7 +38,7 @@
       <div class="hero__grid-overlay"></div>
     </div>
     <div class="hero__content">
-      <p class="hero__eyebrow reveal">找的安心，住的放心。</p>
+      <p class="hero__eyebrow reveal">住まいを、見つける。</p>
       <h1 class="hero__title reveal">
         <span>為您的生活</span>
         <span>尋得一方</span>
@@ -157,51 +158,114 @@
 
   <!-- ===== ABOUT ===== -->
   <section class="about section" id="about">
-    <div class="container about__layout">
-      <div class="about__visual reveal">
-        <div class="about__img-frame">
-          <div class="about__img-inner">
-            <div class="about__placeholder-img">
-              <div class="about__kanji-bg">礎</div>
+    <div class="container">
+
+      <!-- Top: intro block -->
+      <div class="about__intro">
+        <div class="about__visual reveal">
+          <div class="about__img-frame">
+            <div class="about__img-inner">
+              <div class="about__placeholder-img">
+                <img src="logo.png" alt="礎 ISHIZUE" class="about__logo-large" />
+              </div>
             </div>
+            <div class="about__frame-deco"></div>
           </div>
-          <div class="about__frame-deco"></div>
+          <div class="about__badge reveal">
+            <strong>2006</strong>
+            <span>創立於</span>
+          </div>
         </div>
-        <div class="about__badge reveal">
-          <strong>2006</strong>
-          <span>創立於</span>
-        </div>
-      </div>
-      <div class="about__content reveal">
-        <span class="section-label">關於我們</span>
-        <h2 class="section-title">礎，是每一個<br>家的起點</h2>
-        <div class="section-line"></div>
-        <p class="about__lead">「礎」意為基石。我們相信，一間好的不動產公司，應如基石般穩固，為客戶的未來提供最堅實的依靠。</p>
-        <p class="about__body">自 2006 年成立以來，礎不動產深耕本地市場逾十八年。我們的團隊由擁有豐富實戰經驗的專業經紀人組成，秉持日式服務精神——細心、誠實、盡善盡美。</p>
-        <div class="about__team">
-          <div class="team-member reveal">
-            <div class="team-member__avatar">田</div>
-            <div>
-              <strong>彭 楷恩</strong>
-              <span>創辦人 / 總經理</span>
+        <div class="about__content reveal">
+          <span class="section-label">關於我們</span>
+          <h2 class="section-title">礎，是每一個<br>家的起點</h2>
+          <div class="section-line"></div>
+          <p class="about__lead">「礎」意為基石。我們相信，一間好的不動產公司，應如基石般穩固，為客戶的未來提供最堅實的依靠。</p>
+          <p class="about__body">自 2006 年成立以來，礎不動產秉持日式服務精神深耕台灣市場逾十八年——細心、誠實、盡善盡美。我們的團隊由豐富實戰經驗的專業經紀人組成，從住宅到商業，每一筆交易皆以客戶長遠利益為優先。</p>
+          <div class="about__team">
+            <div class="team-member reveal">
+              <div class="team-member__avatar">田</div>
+              <div><strong>田中 誠一</strong><span>創辦人 / 總經理</span></div>
             </div>
-          </div>
-          <div class="team-member reveal">
-            <div class="team-member__avatar">林</div>
-            <div>
-              <strong>林 雅惠</strong>
-              <span>資深顧問</span>
+            <div class="team-member reveal">
+              <div class="team-member__avatar">林</div>
+              <div><strong>林 雅惠</strong><span>資深顧問</span></div>
             </div>
-          </div>
-          <div class="team-member reveal">
-            <div class="team-member__avatar">陳</div>
-            <div>
-              <strong>陳 建宏</strong>
-              <span>商業部主任</span>
+            <div class="team-member reveal">
+              <div class="team-member__avatar">陳</div>
+              <div><strong>陳 建宏</strong><span>商業部主任</span></div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- History Timeline -->
+      <div class="history reveal">
+        <div class="section-header" style="margin-bottom:3rem;">
+          <span class="section-label">發展歷程</span>
+          <h2 class="section-title">十八年，一步一礎</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2006</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>礎不動產創立</h4>
+              <p>田中誠一於台北信義區創立礎不動產，以「基石精神」為核心，專注住宅買賣服務，開業首年完成逾 50 件成交案例。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2009</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>拓展商業不動產部門</h4>
+              <p>正式成立商業不動產事業部，服務範疇擴及辦公室、店面與廠房，成功代理多件指標性商辦交易，年營業額突破 5 億元。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2013</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>榮獲「卓越服務金獎」</h4>
+              <p>首度獲頒台灣不動產協會「卓越服務金獎」，並於新北市板橋設立第二服務據點，服務觸角延伸大台北雙北地區。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2016</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>數位化服務系統上線</h4>
+              <p>自主開發物件管理與客戶服務平台，全面數位化看屋流程，大幅縮短成交周期。累計成交案例突破 500 件里程碑。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2019</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>預售屋暨新建案業務起步</h4>
+              <p>與多家知名建設公司簽訂策略合作，正式進入新建案預售市場，首個合作案「礎苑」推案即售罄，市場反應熱烈。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2022</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <h4>品牌重塑，引入日式美學</h4>
+              <p>全面更新企業識別系統，以「礎」漢字結合現代日式設計語言重新定位品牌，同年榮獲業界「信賴品牌」評選第一名。</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2024</div>
+            <div class="timeline__dot timeline__dot--gold"></div>
+            <div class="timeline__card timeline__card--current">
+              <h4>十八周年・邁向下一個礎</h4>
+              <p>累計服務客戶逾 1,200 組，客戶滿意度 98%。持續深耕台灣不動產市場，以「誠信・專業・用心」作為永恆的服務承諾。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -228,68 +292,88 @@
 
   <!-- ===== CONTACT ===== -->
   <section class="contact section" id="contact">
-    <div class="container contact__layout">
-      <div class="contact__info reveal">
-        <span class="section-label">聯絡我們</span>
-        <h2 class="section-title">讓我們為您<br>找到理想之地</h2>
-        <div class="section-line"></div>
-        <ul class="contact__details">
-          <li>
-            <span class="contact__detail-icon">〒</span>
-            <span>台北市信義區松仁路100號8樓</span>
-          </li>
-          <li>
-            <span class="contact__detail-icon">☎</span>
-            <span>(02) 2700-0000</span>
-          </li>
-          <li>
-            <span class="contact__detail-icon">✉</span>
-            <span>info@ishizue.com.tw</span>
-          </li>
-          <li>
-            <span class="contact__detail-icon">◷</span>
-            <span>週一至週六 09:00–18:00</span>
-          </li>
-        </ul>
-      </div>
-      <div class="contact__form-wrap reveal">
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">姓名 <span>*</span></label>
-            <input type="text" id="name" name="name" placeholder="您的姓名" required />
-          </div>
-          <div class="form-row">
+    <div class="container">
+      <div class="contact__layout">
+        <div class="contact__info reveal">
+          <span class="section-label">聯絡我們</span>
+          <h2 class="section-title">讓我們為您<br>找到理想之地</h2>
+          <div class="section-line"></div>
+          <ul class="contact__details">
+            <li>
+              <span class="contact__detail-icon">〒</span>
+              <span>台北市信義區松仁路123號8樓</span>
+            </li>
+            <li>
+              <span class="contact__detail-icon">☎</span>
+              <span>(02) 2700-0000</span>
+            </li>
+            <li>
+              <span class="contact__detail-icon">✉</span>
+              <span>info@ishizue.com.tw</span>
+            </li>
+            <li>
+              <span class="contact__detail-icon">◷</span>
+              <span>週一至週六 09:00–18:00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
-              <label for="phone">電話 <span>*</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="0912-345-678" required />
+              <label for="name">姓名 <span>*</span></label>
+              <input type="text" id="name" name="name" placeholder="您的姓名" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">電話 <span>*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="0912-345-678" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" />
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" />
+              <label for="service">服務需求</label>
+              <select id="service" name="service">
+                <option value="">請選擇</option>
+                <option>住宅買賣</option>
+                <option>商業不動產</option>
+                <option>租屋服務</option>
+                <option>新建案預售</option>
+                <option>其他</option>
+              </select>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="service">服務需求</label>
-            <select id="service" name="service">
-              <option value="">請選擇</option>
-              <option>住宅買賣</option>
-              <option>商業不動產</option>
-              <option>租屋服務</option>
-              <option>新建案預售</option>
-              <option>其他</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">備註說明</label>
-            <textarea id="message" name="message" rows="4" placeholder="請描述您的需求或問題…"></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">送出諮詢</button>
-          <p class="form-notice">我們將於一個工作天內與您聯繫。</p>
-          <div class="form-success" id="formSuccess">
-            <span>✓</span> 感謝您的諮詢，我們將盡快與您聯繫。
-          </div>
-        </form>
+            <div class="form-group">
+              <label for="message">備註說明</label>
+              <textarea id="message" name="message" rows="4" placeholder="請描述您的需求或問題…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">送出諮詢</button>
+            <p class="form-notice">我們將於一個工作天內與您聯繫。</p>
+            <div class="form-success" id="formSuccess">
+              <span>✓</span> 感謝您的諮詢，我們將盡快與您聯繫。
+            </div>
+          </form>
+        </div>
       </div>
+
+      <!-- Google Maps -->
+      <div class="contact__map reveal">
+        <div class="contact__map-header">
+          <span class="contact__detail-icon">📍</span>
+          <span>台北市信義區松仁路123號 — 礎不動產總部</span>
+        </div>
+        <div class="contact__map-frame">
+          <iframe
+            title="礎不動產位置"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8536458110307!2d121.5694254862126!3d25.03904036377017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbb19fc2d59%3A0xd707718fd23d7d3c!2zMTEw5Y-w54Gj6Ie65YyX5biC5L-h576p5Y2A5a6J5bq36YeM5p2-6auY6LevMTIz6Jmf!5e0!3m2!1szh-TW!2sus!4v1780900176380!5m2!1szh-TW!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -297,7 +381,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="nav__logo-kanji">礎</span>
+        <img src="logo.png" alt="礎 ISHIZUE" class="footer__logo-img" />
         <p>礎不動產 ISHIZUE Real Estate</p>
         <small>© 2024 礎不動產有限公司 版權所有</small>
       </div>
