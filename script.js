@@ -22,6 +22,9 @@ const listings = [
     badgeClass: '',
     kanji: '安',
     bg: 'linear-gradient(135deg, #2a2e2a 0%, #1e2218 100%)',
+    img: 'https://images.unsplash.com/photo-1560448204-603b8f2f4f35?w=700&q=80&auto=format&fit=crop',
+    desc: '位於台北市大安區仁愛路核心地段，鄰近仁愛圓環，捷運步行五分鐘可達。本戶坐落21樓，視野開闊，採光充足。格局方正，主臥套房附更衣室，廚房採開放式歐化設計，全室建材品質優良，適合自住或投資置產。',
+    features: ['捷運5分鐘', '近大安森林公園', '頂級管理', '機械停車位'],
   },
   {
     type: 'rent',
@@ -34,6 +37,9 @@ const listings = [
     badgeClass: 'gold',
     kanji: '商',
     bg: 'linear-gradient(135deg, #22282e 0%, #182028 100%)',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80&auto=format&fit=crop',
+    desc: '位於台北市信義區精華地段，鄰近台北101，交通便利、商業氛圍濃厚。開放式辦公格局，挑高3.5米，採光極佳，適合科技、金融及創意產業進駐，周邊餐廳、便利機能完善。',
+    features: ['台北101步行10分', '大型會議室', '24小時保全', '彈性隔間'],
   },
   {
     type: 'new',
@@ -46,6 +52,9 @@ const listings = [
     badgeClass: 'moss',
     kanji: '新',
     bg: 'linear-gradient(135deg, #28221e 0%, #201a18 100%)',
+    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80&auto=format&fit=crop',
+    desc: '礎苑坐落板橋文化路核心，28層地標建築，採日式建築美學設計外觀。提供2至4房多種格局選擇，全棟高智能設備，空中花園、健身中心、兒童遊憩區等公設完備，預計2026年第二季完工交屋。',
+    features: ['板橋車站5分鐘', '空中花園', '智慧門禁', '全齡公設'],
   },
   {
     type: 'buy',
@@ -58,6 +67,9 @@ const listings = [
     badgeClass: '',
     kanji: '家',
     bg: 'linear-gradient(135deg, #2a2620 0%, #20201a 100%)',
+    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80&auto=format&fit=crop',
+    desc: '內湖科技園區旁的四層樓透天厝，地坪約15坪、建坪60坪，5房3衛、附地下停車位一台。屋況良好，一樓可作商業使用，二至四樓為住宅，前後院美化完善，環境清幽，附近生活機能齊備。',
+    features: ['自備車位', '前後院', '近內科園區', '可商業使用'],
   },
   {
     type: 'rent',
@@ -70,6 +82,9 @@ const listings = [
     badgeClass: 'gold',
     kanji: '室',
     bg: 'linear-gradient(135deg, #1e2226 0%, #161a1e 100%)',
+    img: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80&auto=format&fit=crop',
+    desc: '位於中山區林森北路，捷運中山站步行三分鐘。12坪精緻套房，全新裝潢，傢俱家電齊全可直接入住，獨立廚房、全套浴廁，採光良好，適合單身或雙人租住，周邊餐廳、超商、藥妝店林立。',
+    features: ['捷運3分鐘', '全配傢俱', '可養寵物', '獨立廚房'],
   },
   {
     type: 'new',
@@ -82,6 +97,9 @@ const listings = [
     badgeClass: 'moss',
     kanji: '光',
     bg: 'linear-gradient(135deg, #202828 0%, #181e20 100%)',
+    img: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=700&q=80&auto=format&fit=crop',
+    desc: '礎光坐落桃園中壢環中路，24層景觀豪宅，提供2至3房精選格局。全棟採落地窗設計，高樓層視野無遮，遠眺桃園市區天際線。捷運青埔站十分鐘車程，高鐵桃園站生活圈，預計2027年首季完工。',
+    features: ['近高鐵桃園站', '全棟落地窗', '屋頂觀星台', '低總價首購優先'],
   },
 ];
 
@@ -169,13 +187,17 @@ const testimonials = [
       const card = document.createElement('article');
       card.className = 'listing-card reveal';
       card.dataset.type = item.type;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', `查看物件：${item.title}`);
       card.innerHTML = `
         <div class="listing-card__img">
-          <div class="listing-card__placeholder"
-               style="background:${item.bg}">
-            ${item.kanji}
-          </div>
+          <div class="listing-card__placeholder" style="background:${item.bg}">${item.kanji}</div>
+          <img class="listing-card__photo" src="${item.img || ''}" alt="${item.title}" loading="lazy" onerror="this.classList.add('img-error')">
           <span class="listing-card__badge ${item.badgeClass}">${item.badge}</span>
+          <div class="listing-card__overlay">
+            <span class="listing-card__view-label">查看詳情</span>
+          </div>
         </div>
         <div class="listing-card__body">
           <p class="listing-card__area">${item.area}</p>
@@ -186,10 +208,19 @@ const testimonials = [
           <p class="listing-card__price">
             ${item.price}<small>${item.unit}</small>
           </p>
+          <div class="listing-card__cta">
+            <span>查看物件</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
         </div>
       `;
+
+      card.addEventListener('click', () => window.__openListingModal(item));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.__openListingModal(item); }
+      });
+
       grid.appendChild(card);
-      // Slight stagger
       setTimeout(() => {
         const io = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting) {
@@ -325,6 +356,73 @@ const testimonials = [
   }, { rootMargin: '-40% 0px -55% 0px' });
 
   sections.forEach(s => io.observe(s));
+})();
+
+// ── Property Modal ────────────────────────
+(function initModal() {
+  const modal = document.getElementById('propModal');
+  const backdrop = document.getElementById('modalBackdrop');
+  const closeBtn = document.getElementById('modalClose');
+  const ctaBtn = document.getElementById('modalCta');
+
+  function openModal(item) {
+    const imgEl = document.getElementById('modalImg');
+    imgEl.classList.remove('img-error');
+    imgEl.src = item.img || '';
+    imgEl.alt = item.title;
+    imgEl.onerror = () => imgEl.classList.add('img-error');
+
+    const placeholder = document.getElementById('modalImgPlaceholder');
+    placeholder.textContent = item.kanji;
+    placeholder.style.background = item.bg;
+
+    const badge = document.getElementById('modalBadge');
+    badge.textContent = item.badge;
+    badge.className = 'prop-modal__badge' + (item.badgeClass ? ' ' + item.badgeClass : '');
+
+    document.getElementById('modalArea').textContent = item.area;
+    document.getElementById('modalTitle').textContent = item.title;
+    document.getElementById('modalMeta').innerHTML = item.meta.map(m => `<span>${m}</span>`).join('');
+    document.getElementById('modalDesc').textContent = item.desc || '';
+    document.getElementById('modalPrice').textContent = item.price;
+    document.getElementById('modalUnit').textContent = item.unit;
+
+    const featuresEl = document.getElementById('modalFeatures');
+    if (item.features && item.features.length) {
+      featuresEl.innerHTML = item.features.map(f => `<span class="prop-modal__feature">${f}</span>`).join('');
+      featuresEl.hidden = false;
+    } else {
+      featuresEl.hidden = true;
+    }
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  backdrop.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  ctaBtn.addEventListener('click', () => {
+    closeModal();
+    setTimeout(() => {
+      const contact = document.getElementById('contact');
+      if (contact) {
+        const top = contact.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 350);
+  });
+
+  window.__openListingModal = openModal;
 })();
 
 // ── Smooth scroll offset for fixed nav ───

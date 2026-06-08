@@ -397,6 +397,38 @@
     </div>
   </footer>
 
+  <!-- ===== PROPERTY MODAL ===== -->
+  <div class="prop-modal" id="propModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="prop-modal__backdrop" id="modalBackdrop"></div>
+    <div class="prop-modal__box">
+      <button class="prop-modal__close" id="modalClose" aria-label="關閉">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="prop-modal__img-wrap">
+        <div class="prop-modal__img-placeholder" id="modalImgPlaceholder"></div>
+        <img class="prop-modal__img" id="modalImg" src="" alt="" />
+        <span class="prop-modal__badge" id="modalBadge"></span>
+      </div>
+      <div class="prop-modal__info">
+        <p class="prop-modal__area" id="modalArea"></p>
+        <h2 class="prop-modal__title" id="modalTitle"></h2>
+        <div class="prop-modal__divider"></div>
+        <div class="prop-modal__meta" id="modalMeta"></div>
+        <p class="prop-modal__desc" id="modalDesc"></p>
+        <div class="prop-modal__features" id="modalFeatures"></div>
+        <div class="prop-modal__price-row">
+          <div>
+            <span class="prop-modal__price-label">價格</span>
+            <p class="prop-modal__price"><span id="modalPrice"></span><small id="modalUnit"></small></p>
+          </div>
+          <button class="btn btn--primary prop-modal__cta" id="modalCta">聯絡詢問此物件</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
