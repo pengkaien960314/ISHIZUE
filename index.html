@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>礎 ISHIZUE | 不動產</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-kanji">礎</span>
+        <span class="nav__logo-text">ISHIZUE<br><small>不動產</small></span>
+      </a>
+      <button class="nav__hamburger" id="hamburger" aria-label="選單">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services">服務</a></li>
+        <li><a href="#listings">精選物件</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#testimonials">客戶評價</a></li>
+        <li><a href="#contact" class="nav__cta">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid-overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">找的安心，住的放心。</p>
+      <h1 class="hero__title reveal">
+        <span>為您的生活</span>
+        <span>尋得一方</span>
+        <span class="hero__title--accent">恆久之地</span>
+      </h1>
+      <p class="hero__sub reveal">住宅買賣・商業不動產・租屋服務・新建案預售</p>
+      <div class="hero__actions reveal">
+        <a href="#listings" class="btn btn--primary">瀏覽精選物件</a>
+        <a href="#contact" class="btn btn--ghost">免費諮詢</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat reveal">
+        <strong>1,200<sup>+</sup></strong>
+        <span>成交案例</span>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat reveal">
+        <strong>18</strong>
+        <span>年深耕經驗</span>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat reveal">
+        <strong>98<sup>%</sup></strong>
+        <span>客戶滿意度</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">服務項目</span>
+        <h2 class="section-title">以誠信為本<br>全方位不動產服務</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 40V20L24 8L40 20V40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="18" y="28" width="12" height="12" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 20H40" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <h3>住宅買賣</h3>
+          <p>從首購族到換屋族，我們提供完整的買賣流程協助，確保每一筆交易安心透明。</p>
+          <span class="service-card__tag">Residential</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="36" height="26" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 22H42M18 22V40M30 22V40" stroke="currentColor" stroke-width="1"/>
+              <path d="M14 8H34V14H14V8Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>商業不動產</h3>
+          <p>辦公室、店面、廠房、倉儲，精準媒合商業需求，為您的事業奠定穩固基礎。</p>
+          <span class="service-card__tag">Commercial</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="20" r="8" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 28C14 28 8 33 8 38H40C40 33 34 28 24 28Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M32 12L36 8M16 12L12 8" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>租屋服務</h3>
+          <p>長短租皆有，屋主與租客雙向媒合，合約保障完善，租屋無憂。</p>
+          <span class="service-card__tag">Rental</span>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="32" height="32" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 20H40M20 8V40M8 32H40" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2"/>
+              <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>新建案預售</h3>
+          <p>第一手建案資訊，專業解析格局與建材，協助您掌握最佳入市時機。</p>
+          <span class="service-card__tag">Pre-sale</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LISTINGS ===== -->
+  <section class="listings section" id="listings">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">精選物件</span>
+        <h2 class="section-title">嚴選每一處<br>值得託付的居所</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="listings__filter reveal">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="buy">買賣</button>
+        <button class="filter-btn" data-filter="rent">出租</button>
+        <button class="filter-btn" data-filter="new">新建案</button>
+      </div>
+      <div class="listings__grid" id="listingsGrid">
+        <!-- Cards injected by JS -->
+      </div>
+      <div class="listings__more reveal">
+        <a href="#contact" class="btn btn--outline">查看更多物件</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container about__layout">
+      <div class="about__visual reveal">
+        <div class="about__img-frame">
+          <div class="about__img-inner">
+            <div class="about__placeholder-img">
+              <div class="about__kanji-bg">礎</div>
+            </div>
+          </div>
+          <div class="about__frame-deco"></div>
+        </div>
+        <div class="about__badge reveal">
+          <strong>2006</strong>
+          <span>創立於</span>
+        </div>
+      </div>
+      <div class="about__content reveal">
+        <span class="section-label">關於我們</span>
+        <h2 class="section-title">礎，是每一個<br>家的起點</h2>
+        <div class="section-line"></div>
+        <p class="about__lead">「礎」意為基石。我們相信，一間好的不動產公司，應如基石般穩固，為客戶的未來提供最堅實的依靠。</p>
+        <p class="about__body">自 2006 年成立以來，礎不動產深耕本地市場逾十八年。我們的團隊由擁有豐富實戰經驗的專業經紀人組成，秉持日式服務精神——細心、誠實、盡善盡美。</p>
+        <div class="about__team">
+          <div class="team-member reveal">
+            <div class="team-member__avatar">田</div>
+            <div>
+              <strong>彭 楷恩</strong>
+              <span>創辦人 / 總經理</span>
+            </div>
+          </div>
+          <div class="team-member reveal">
+            <div class="team-member__avatar">林</div>
+            <div>
+              <strong>林 雅惠</strong>
+              <span>資深顧問</span>
+            </div>
+          </div>
+          <div class="team-member reveal">
+            <div class="team-member__avatar">陳</div>
+            <div>
+              <strong>陳 建宏</strong>
+              <span>商業部主任</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">客戶評價</span>
+        <h2 class="section-title">信賴，來自<br>每一段真實的故事</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials__track" id="testimonialsTrack">
+        <div class="testimonials__inner" id="testimonialsInner">
+          <!-- injected by JS -->
+        </div>
+      </div>
+      <div class="testimonials__controls">
+        <button class="testi-btn" id="testiPrev" aria-label="上一則">←</button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" id="testiNext" aria-label="下一則">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container contact__layout">
+      <div class="contact__info reveal">
+        <span class="section-label">聯絡我們</span>
+        <h2 class="section-title">讓我們為您<br>找到理想之地</h2>
+        <div class="section-line"></div>
+        <ul class="contact__details">
+          <li>
+            <span class="contact__detail-icon">〒</span>
+            <span>台北市信義區松仁路100號8樓</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">☎</span>
+            <span>(02) 2700-0000</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">✉</span>
+            <span>info@ishizue.com.tw</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">◷</span>
+            <span>週一至週六 09:00–18:00</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contact__form-wrap reveal">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">姓名 <span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="您的姓名" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">電話 <span>*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="0912-345-678" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">服務需求</label>
+            <select id="service" name="service">
+              <option value="">請選擇</option>
+              <option>住宅買賣</option>
+              <option>商業不動產</option>
+              <option>租屋服務</option>
+              <option>新建案預售</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">備註說明</label>
+            <textarea id="message" name="message" rows="4" placeholder="請描述您的需求或問題…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">送出諮詢</button>
+          <p class="form-notice">我們將於一個工作天內與您聯繫。</p>
+          <div class="form-success" id="formSuccess">
+            <span>✓</span> 感謝您的諮詢，我們將盡快與您聯繫。
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-kanji">礎</span>
+        <p>礎不動產 ISHIZUE Real Estate</p>
+        <small>© 2024 礎不動產有限公司 版權所有</small>
+      </div>
+      <div class="footer__links">
+        <a href="#services">服務項目</a>
+        <a href="#listings">精選物件</a>
+        <a href="#about">關於我們</a>
+        <a href="#contact">聯絡我們</a>
+      </div>
+      <div class="footer__deco">
+        <div class="footer__kanji-bg">不動産</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
